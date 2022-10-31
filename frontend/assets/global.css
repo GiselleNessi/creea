@@ -3,7 +3,7 @@
 }
 
 html {
-  --bg: #e7f3ff;
+  --bg: #fff;
   --fg: #1e1e1e;
   --gray: #555;
   --light-gray: #ccc;
@@ -82,6 +82,10 @@ a:active,
 
 .btn-outline-primary{
   width: 100%;
+}
+
+.btn-success {
+  background-color: #47770A !important;
 }
 
 button, input {
