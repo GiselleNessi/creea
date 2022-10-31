@@ -6,18 +6,24 @@ import { Donation, STORAGE_COST } from './model'
 class DonationContract {
   beneficiary: string = "v1.faucet.nonofficial.testnet";
   donations: UnorderedMap = new UnorderedMap('map-uid-1');
+  owner: string = "gisellehacker.testnet"
 
   @initialize({privateFunction: true})
-  init({ beneficiary }:{beneficiary: string}) {
+  init({ beneficiary, owner }) {
     this.beneficiary = beneficiary
+    this.owner = owner
   }
+
 
   @call({payableFunction: true})
   donate() {
     // Get who is calling the method and how much $NEAR they attached
+    
     let donor = near.predecessorAccountId(); 
     let donationAmount: bigint = near.attachedDeposit() as bigint;
-
+ 
+    
+    assert(donor === this.owner.toString(), `Only Admin can donate ${this.owner}, Donor is ${donor}`);
     let donatedSoFar = this.donations.get(donor) === null? BigInt(0) : BigInt(this.donations.get(donor) as string)
     let toTransfer = donationAmount;
  
@@ -45,6 +51,11 @@ class DonationContract {
   @call({privateFunction: true})
   change_beneficiary(beneficiary) {
     this.beneficiary = beneficiary;
+  }
+
+  @call({privateFunction: true})
+  change_owner(owner: string) {
+    this.owner = owner;
   }
 
   @view({})
