@@ -22,6 +22,10 @@ body {
   background-color: var(--bg);
 }
 
+.navbar-dark {
+  background-color: #47770A !important;
+}
+
 .donation-box {
   max-width: 24em;
   box-shadow: #bac4cd 0px 0px 18px;
@@ -83,6 +87,8 @@ a:active,
 .btn-outline-primary{
   width: 100%;
 }
+
+
 
 .btn-success {
   background-color: #47770A !important;

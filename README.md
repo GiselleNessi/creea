@@ -1,12 +1,14 @@
 # Creea 🌱
 
+We empower women who can take action in Latam with grants and resources to support their cause through the power of web3. As the world is asking for a change and a new paradigm of society, our community has stepped up to demonstrate the many ways blockchain can be used to enhance real change and provide much-needed support to the people leading the most impactful initiatives
+
 # What This Example Shows
 
 1. How to receive and transfer $NEAR on a contract.
 2. How to divide a project into multiple modules.
 3. How to handle the storage costs.
 4. How to handle transaction results.
-5. How to use a `Map`.
+5. Only owner can make use of donation or payment systems by NEAR.
 
 <br />
 
@@ -34,3 +36,8 @@ npm start
 ---
 
 # Nice to have
+
+Voting system with NEAR, to vote for grants approvals
+Use REACT for the UI
+Integrate a tokenomics strategy to invite DAOs to participate in the voting system
+Make ir multi chain
