@@ -37,7 +37,7 @@ npm start
 
 # Nice to have
 
-Voting system with NEAR, to vote for grants approvals
-Use REACT for the UI
-Integrate a tokenomics strategy to invite DAOs to participate in the voting system
-Make ir multi chain
+1. Voting system with NEAR, to vote for grants approvals
+2. Use REACT for the UI
+3. Integrate a tokenomics strategy to invite DAOs to participate in the voting system
+4. Make ir multi chain
